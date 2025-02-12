@@ -1,0 +1,1161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html, body {
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  overflow-y: auto; /* Ensure smooth scrolling */
+}
+
+.top-header {
+  background-color: rgba(39, 35, 67, 1); /* Purple */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow items to wrap */
+  padding: 10px 200px;
+  font-size: 14px; /* Default size */
+  font-family: 'Inter', sans-serif;
+  word-spacing: 2px;
+  letter-spacing: 0.5px;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+/* Medium Screens - Reduce font size */
+@media (max-width: 768px) {
+  .top-header {
+    padding: 10px 20px;
+    font-size: 12px; /* Slightly smaller */
+    word-spacing: 1px;
+    letter-spacing: 0px;
+  }
+}
+
+/* Small Screens - Further reduce font size */
+@media (max-width: 480px) {
+  .top-header {
+    padding: 5px;
+  
+    word-spacing: 0px;
+    letter-spacing: -0.5px;
+  }
+}
+
+
+
+/* Free Shipping Text (on the left side) */
+.free-shipping {
+  font-size: 14px;
+  right: 0;
+  /* No margin here, it's already aligned to the left */
+  
+}
+.language-dropdown{
+background-color:rgba(39, 35, 67, 1) ;
+margin-left: 50%;
+color: white;
+}
+/* Ensure no gap between FAQ, Language, and Need Help buttons */
+.header-button {
+  display: flex;
+  align-items: center;
+  gap: 0; /* No gap between buttons */
+}
+
+.header-button button {
+  background-color: transparent;
+  color: white;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 0; /* Ensure there's no margin */
+}
+
+
+/* FAQ Button Specific Styling (No icon) */
+.faq-btn {
+  font-size: 14px;
+}
+
+/* Need Help Button Specific Styling */
+.help-btn {
+  font-size: 14px;
+}
+
+/* Image Icon for Need Help Button */
+.help-icon {
+  width: 16px; /* Set the size of the icon */
+  height: 16px; /* Set the size of the icon */
+  margin-right: 5px; /* Gap between the icon and text */
+  display: inline-block;
+}
+
+
+/* Second Header - Main Header */
+.second-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 200px;
+  background-color: rgba(240, 242, 243, 1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ensure full width */
+  margin: 0; /* Remove default margins */
+}
+
+/* Adjust padding for smaller screens */
+@media (max-width: 768px) {
+  .second-header {
+    padding: 10px 20px; /* Reduce padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .second-header {
+    padding: 10px; /* Remove almost all side margins */
+  }
+}
+/* Third Header - Contact Info and Navigation Links */
+.third-header {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center;
+  padding: 10px 200px;
+  background-color: white;
+  width: 100%;
+  margin: 0;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  gap: 15px; /* Add spacing between buttons for large screens */
+  width: 100%;
+}
+
+.nav-button {
+  background-color: transparent;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold; /* Make buttons bold */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+}
+
+/* Contact Info */
+.contact-info {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 5px; /* Move below buttons */
+  text-align: center; /* Center align */
+  width: 100%;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 768px) {
+  .third-header {
+    padding: 10px 20px; /* Reduce side padding */
+  }
+
+  .nav-buttons {
+    flex-wrap: wrap; /* Prevent buttons from breaking */
+    gap: 5px; /* Reduce space between buttons */
+  }
+}
+
+@media (max-width: 480px) {
+  .third-header {
+    padding: 10px; /* Adjust padding */
+  }
+
+  .nav-buttons {
+    flex-direction: row; /* Keep buttons in one line */
+    gap: 0; /* Remove all spacing between buttons */
+  }
+
+  .nav-button {
+    font-size: 12px; /* Reduce size */
+    padding: 8px 10px; /* Adjust padding to fit */
+  }
+}
+
+/* Divider Line */
+.header-divider {
+  width: 100%;
+  height: 2px;
+  background-color: rgb(189, 189, 189);
+  margin-top: 10px;
+}
+/* Global Reset for specific elements */
+html, body, div, section, header, footer, main {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color:white; /* Background color for the page */
+}
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  margin-left: 15%;
+  height: 850px;
+  background-color: rgba(240, 242, 243, 1);
+  overflow: hidden; /* Prevents content overflow */
+}
+
+/* Banner Text */
+.banner-text {
+  color: rgba(39, 35, 67, 1);
+  max-width: 50%;
+  text-align: start;
+  font-weight: 700;
+}
+
+.banner-text h2 {
+  font-size: 48px; /* Default size */
+  font-weight: bold;
+  line-height: 1.2; /* Prevents text from overlapping */
+}
+
+/* ✅ Responsive Fix for Smaller Screens */
+@media (max-width: 1024px) {
+  .banner {
+    width: 90%; /* More flexible width */
+    margin-left: 5%;
+    height: 700px; /* Reduce height */
+  }
+
+  .banner-text {
+    max-width: 80%; /* Allow more space for text */
+  }
+
+  .banner-text h2 {
+    font-size: 38px; /* Reduce font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    width: 100%; /* Full width */
+    margin-left: 0;
+    height: 600px; /* Reduce height */
+    padding: 20px; /* Add some space inside */
+  }
+
+  .banner-text {
+    max-width: 90%; /* Prevents overflow */
+    text-align: center; /* Center text */
+  }
+
+  .banner-text h2 {
+    font-size: 28px; /* Smaller font */
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 450px; /* Even smaller for mobile */
+    padding: 10px;
+  }
+
+  .banner-text {
+    max-width: 95%;
+  }
+
+  .banner-text h2 {
+    font-size: 22px; /* Mobile-friendly */
+  }
+}
+/* Logos Section Container */
+.logo-section {
+  padding-top: 2.5rem; /* py-10 */
+  margin-top: 6rem; /* mt-24 */
+  text-align: center;
+}
+
+/* Logo Wrapper */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem; /* gap-10 */
+  padding-left: 2.25rem; /* px-9 */
+  padding-right: 2.25rem; /* px-9 */
+  flex-wrap: wrap; /* Ensure logos adjust on small screens */
+}
+
+/* Logo Card */
+.logo-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  padding: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Logo Image */
+.logo-card img {
+  width: 80px;
+  height: 80px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* ✅ Responsive Styles */
+@media (max-width: 768px) {
+  .logo-container {
+    gap: 1rem; /* Reduce gap for small screens */
+  }
+
+  .logo-card {
+    width: 80px;
+    height: 80px;
+  }
+
+  .logo-card img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-container {
+    gap: 0.5rem; /* Further reduce gap */
+  }
+
+  .logo-card {
+    width: 70px;
+    height: 70px;
+  }
+
+  .logo-card img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* General Section Styles */
+.section {
+  padding-top: 2rem; /* py-8 */
+  margin-top: 6rem; /* mt-24 */
+  text-align: center;
+}
+
+/* Section Headings */
+.section-title {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 600; /* font-semibold */
+  margin-bottom: 1rem; /* mb-4 */
+  color: rgba(39, 35, 67, 1);
+}
+/* Default spacing for large screens */
+.product-section {
+  margin-bottom: 50px; /* Adjust as needed */
+}
+
+/* More space between product sections on smaller screens */
+@media (max-width: 768px) {
+  .product-section {
+    margin-bottom: 80px; /* Increased margin for better spacing */
+  }
+}
+
+/* Product Container */
+.product-container {
+  display: flex;
+  justify-content: center;
+  gap: 0rem;
+  padding-left: 12rem; /* px-48 */
+  padding-right: 12rem; /* px-48 */
+  overflow-x: auto;
+}
+
+/* Product Card */
+.product-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  min-width: 200px;
+  text-align: center;
+  position: relative;
+}
+
+/* Product Image */
+.product-card img {
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-card img:hover {
+  transform: scale(1.1);
+}
+
+/* Product Info */
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+  width: 2rem;
+  height: 2rem;
+  background-color: #e2e8f0;
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.add-to-cart:hover {
+  background-color: #3b82f6;
+}
+
+/* Top Categories Product Overlay */
+.category-overlay {
+  position: absolute;
+  bottom: 2rem;
+  left: 1rem;
+  width: 18rem;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 0.875rem;
+}
+/* ✅ Explore Section - Default Layout */
+.explore-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  overflow-x: auto;
+  flex-wrap: wrap;
+}
+
+/* ✅ Vertical Title Text */
+.explore-title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: black;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ✅ Main Big Image */
+.explore-big-image {
+  width: 450px;
+  height: 450px;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.explore-big-image:hover {
+  transform: scale(1.1);
+}
+
+/* ✅ Small Images Grid */
+.explore-small-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two images per row */
+  gap: 1rem;
+  justify-items: center;
+}
+
+/* ✅ Small Images Styling */
+.explore-small-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.explore-small-image:hover {
+  transform: scale(1.1);
+}
+
+/* ✅ Responsive Adjustments for Small Screens */
+@media (max-width: 768px) {
+  .explore-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .explore-big-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .explore-small-container {
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .explore-small-image {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+
+
+/* Products Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* Our Products Row */
+.our-products {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-left: 12rem;
+  padding-right: 12rem;
+  margin-top: 2.5rem;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+  .product-container, .our-products {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-container, .our-products {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .product-card {
+    min-width: 180px;
+  }
+
+  .category-overlay {
+    width: 14rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-container, .our-products {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .product-card {
+    width: 100%;
+  }
+
+  .product-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .add-to-cart {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .explore-title {
+    font-size: 1rem;
+  }
+
+  .category-overlay {
+    width: 12rem;
+  }
+}
+
+.footer {
+  background-color: #f7f7f7;
+  color: #4a4a4a;
+  padding: 3rem 2rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.footer-section {
+  width: 100%;
+  max-width: 250px;
+}
+
+.footer-logo {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #2d2d2d;
+}
+
+.footer-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.footer-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #2d2d2d;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.footer-list li {
+  margin-bottom: 5px;
+}
+
+.newsletter-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.newsletter-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.newsletter-button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.newsletter-button:hover {
+  background-color: #0056b3;
+}
+
+.newsletter-text {
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  padding-top: 15px;
+  margin-top: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+}
+
+.footer-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-payment {
+  display: flex;
+  gap: 15px;
+  font-size: 1rem;
+}
+/* General container responsiveness */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Contact Section - Adjusting spacing */
+.contact-section {
+  padding: 40px 20px;
+}
+
+/* Centering content on smaller screens */
+.contact-section h2,
+.contact-section p {
+  text-align: center;
+}
+
+/* Flexbox adjustments for responsiveness */
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Responsive layout for contact details & form */
+.contact-info,
+.contact-form {
+  width: 100%;
+}
+
+/* Form inputs and button */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #14b8a6;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #0f766e;
+}
+
+/* Footer icons section */
+.footer-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 768px) {
+  .contact-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 48%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .contact-section {
+    padding: 30px 15px;
+  }
+
+  .footer-icons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ================== Global Reset ================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #333;
+  background-color: #fff;
+}
+
+/* ================== Page Container (Full Width) ================== */
+.about-container {
+  padding: 40px 0; /* Removed side padding */
+  width: 100%;
+
+}
+
+/* ================== About Section ================== */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.about-content {
+  background: #065f5f;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.about-content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.about-content p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.about-button {
+  background: white;
+  color: #065f5f;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.about-button:hover {
+  background: #fff8;
+}
+
+/* ================== Image Container ================== */
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* ================== Brand Features ================== */
+.brand-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Adjust for full-width layout */
+  gap: 20px;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.brand-feature {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  width: 20%; /* Keep same width as before */
+  transition: transform 0.3s;
+}
+
+.brand-feature:hover {
+  transform: scale(1.05);
+}
+
+/* ================== Product Section ================== */
+.popular-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.popular-product {
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.popular-product:hover {
+  transform: scale(1.05);
+}
+
+.popular-product img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.popular-product img:hover {
+  transform: scale(1.1);
+}
+
+/* ================== Responsive Design ================== */
+@media (min-width: 768px) {
+  .about-section {
+    flex-direction: row;
+    text-align: center;
+  }
+
+  .about-content {
+    flex: 1;
+  }
+
+  .about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .brand-features {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+  .popular-products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Default layout for large screens (desktop) */
+.product-page {
+  padding: 2rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns on large screens */
+  gap: 16px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Ensure product items look consistent */
+.product-item {
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-item:hover {
+  transform: scale(1.05);
+}
+
+/* Medium screens (laptops, tablets) */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    max-width: 900px;
+  }
+}
+
+/* Small screens (tablets, large mobiles) */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    max-width: 600px;
+  }
+}
+
+/* Extra small screens (mobile phones) */
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* 1 column */
+    max-width: 100%;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .product-item {
+    margin: 0 auto;
+  }
+}
+
+/* Product Images - Adjust for Small Screens */
+.product-images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (max-width: 480px) {
+  .product-images {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #f5f5f5;
+}
+
+footer input {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  footer input {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer input {
+    width: 150px;
+  }
+}
+/* Featured Products Section */
+.featured-section-container {
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* Section Title */
+.featured-section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: rgba(39, 35, 67, 1);
+  margin-bottom: 20px;
+}
+
+/* Product Cards Wrapper */
+.featured-section-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 48px;
+}
+
+/* Individual Product Card */
+.featured-section-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  width: 250px;
+  min-width: 200px;
+}
+
+.featured-section-card:hover {
+  transform: scale(1.05);
+}
+
+/* Product Image */
+.featured-section-image {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+/* Product Details */
+.featured-section-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.featured-section-price {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Add to Cart Button */
+.featured-section-button {
+  width: 32px;
+  height: 32px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s ease-in-out;
+}
+
+.featured-section-button:hover {
+  background-color: #3b82f6;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .featured-section-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 24px;
+  }
+
+  .featured-section-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .featured-section-title {
+    font-size: 1.3rem;
+  }
+
+  .featured-section-card {
+    width: 100%;
+    max-width: 280px;
+  }
+}
